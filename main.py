@@ -14,10 +14,10 @@ yellow = 255, 255,0
 font = pygame.font.SysFont('Comic Sans MS',32)
 x = 50
 y = 490
-w=20
+w=10
 swaps= False
 def iSort():
-    arr = [[random.randint(1,150),False] for n in range(45)]
+    arr = [[random.randint(1,150),False] for n in range(90)]
     i=1
     j=i
     while i < len(arr):
@@ -61,7 +61,7 @@ def iSort():
             j=i
     
         pygame.display.flip()
-        clock.tick(30)
+        clock.tick(60)
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT: sys.exit()
@@ -81,7 +81,7 @@ def iSort():
         clock.tick(30)
 
 def sSort():
-    arr = [[random.randint(1,150),False] for n in range(45)]
+    arr = [[random.randint(1,150),False] for n in range(90)]
     i=0
     temp=0
     j=1
@@ -123,7 +123,7 @@ def sSort():
             if i+1 != len(arr):
                 j=i+1
         pygame.display.flip()
-        clock.tick(30)
+        clock.tick(60)
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT: sys.exit()
@@ -146,7 +146,7 @@ def sSort():
     
 
 def bSort():
-    arr = [[random.randint(1,150),False] for n in range(45)]
+    arr = [[random.randint(1,150),False] for n in range(90)]
     i= len(arr)
     j=0
     swaps= False
@@ -192,7 +192,7 @@ def bSort():
         if i == 0:
             arr[0][1] = True
         pygame.display.flip()
-        clock.tick(30)
+        clock.tick(60)
 
     while True:
         for event in pygame.event.get():
@@ -234,7 +234,7 @@ def merge(arr,l1,r1,l2,r2):
     return temp
 	
 def mSort():
-    arr = [[random.randint(1,150),False] for n in range(45)]
+    arr = [[random.randint(1,150),False] for n in range(90)]
     l = 1
     n = len(arr)
     i=0
@@ -313,7 +313,7 @@ def partition(arr, l, h):
     arr[i + 1], arr[h] = arr[h], arr[i + 1] 
     return (i + 1)
 def qSort():
-    arr = [[random.randint(1,150),False] for n in range(45)]
+    arr = [[random.randint(1,150),False] for n in range(90)]
     size = len(arr)
     stack = [0] * (size) 
     l=0
